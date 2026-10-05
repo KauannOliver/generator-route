@@ -2,7 +2,7 @@
 
 A desktop workflow that reads route records from Excel, requests routing data, and exports interactive Folium maps with distance and travel-time details.
 
-> Private repository: route identifiers and generated maps may reveal operational locations. Remove real route data and use authorized API credentials only.
+> Public source edition. Configure credentials locally and use empty or synthetic inputs. Company and institution names identify the original integration context; this repository does not claim affiliation or endorsement.
 
 ## Workflow
 
