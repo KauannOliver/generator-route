@@ -1,0 +1,7 @@
+flet
+pandas
+openpyxl
+openrouteservice
+folium
+geopy
+python-dotenv

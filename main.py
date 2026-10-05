@@ -1,19 +1,28 @@
+import os
 import flet as ft
+from dotenv import load_dotenv
 import pandas as pd
 import openrouteservice
 import webbrowser
 import folium
 from geopy.geocoders import Nominatim
 
+load_dotenv()
+
 ### cfg openrouteservice e geolocator ###
-client = openrouteservice.Client(key='SUA_API_KEY')
+api_key = os.getenv("OPENROUTESERVICE_API_KEY")
+if not api_key:
+    raise RuntimeError("Set OPENROUTESERVICE_API_KEY in the local environment.")
+client = openrouteservice.Client(key=api_key)
 geolocator = Nominatim(user_agent="rotas_protheus")
 
-### caminho do excel ###
-caminho_excel = r"S:\Custos\Kauan\Rotas.xlsx"
+### workbook path is configured locally ###
+caminho_excel = os.getenv("ROUTE_WORKBOOK")
 
 ### carregar dados excel ###
 def carregar_dados_excel(caminho):
+    if not caminho:
+        raise RuntimeError("Set ROUTE_WORKBOOK to the authorized local workbook path.")
     df = pd.read_excel(caminho)
     return df
 
