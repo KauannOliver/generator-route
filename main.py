@@ -88,7 +88,7 @@ def gerar_mapa_html(municipio_origem, uf_origem, municipio_destino, uf_destino, 
             <label style="font-weight: bold; color: #555;">Tempo Gasto:</label>
             <span style="color: #777;">{duration_min:.2f} minutos</span>
         </div>
-        <center><img src="logoen1.png" alt="Mapa da rota" style="width: 80%; display: block; margin-top: 160px;"></center>
+        <center><img src="logoen1.svg" alt="Mapa da rota" style="width: 80%; display: block; margin-top: 160px;"></center>
     </div>
     """
 
